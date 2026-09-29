@@ -151,7 +151,7 @@ def check_normal(output):
   browser.playing('VTS01_VOB40_CELL01')
   browser.click('#hotspots [data-button="6"]')
   browser.wait("!$('titlePanel').hidden")
-  assert browser.js("$('video').paused && $('targetLinks').querySelector('a').getAttribute('href').includes('StayAlive_1080p')"),'Movie remains an external destination'
+  assert browser.js("$('video').paused && (localArchive ? $('targetLinks').querySelector('a').getAttribute('href').includes('StayAlive_1080p') : !$('targetLinks').children.length && $('targetInfo').textContent.includes('not included'))"),'Movie destination is handled correctly for local and hosted views'
   browser.click('#returnToMenu')
   browser.playing('VTS01_VOB40_CELL01')
   browser.client.call('Page.reload')
@@ -223,9 +223,12 @@ def check_gallery(output):
 
 
 def main():
+ global URL
  parser=argparse.ArgumentParser(description=__doc__)
  parser.add_argument('--only',choices=['normal','restricted','gallery'])
+ parser.add_argument('--url',default=URL,help='Viewer URL to check; defaults to the local index.html')
  args=parser.parse_args()
+ URL=args.url
  output=pathlib.Path(tempfile.mkdtemp(prefix='stayalive-menu-check-'))
  result={'output':str(output)}
  print('Artifacts: '+str(output),flush=True)

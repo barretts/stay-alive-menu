@@ -20,3 +20,6 @@ __pycache__/
 /utilities/checks/
 /utilities/linked-menu-live.png
 /utilities/*-result.json
+
+# Generated GitHub Pages deployment bundle.
+/_site/

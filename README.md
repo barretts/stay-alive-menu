@@ -20,6 +20,12 @@ The Git checkout includes the working gallery and menu-only view, playback MP4s,
 
 A fresh checkout can play and navigate the menus. Original VOB download links and full source validation require the excluded local files. Re-extraction and re-encoding require the original DVD source described below.
 
+## GitHub Pages
+
+In the repository's **Settings → Pages**, choose **GitHub Actions** as the source, then run **Publish GitHub Pages** from the Actions tab. The site is at `https://barretts.github.io/stay-alive-menu/`; append `?view=menu` for the autoplay menu view.
+
+The Pages workflow publishes on pushes to `main` or a manual run after GitHub Pages is enabled with GitHub Actions as its source. `utilities/build_site.py` assembles only the viewer, playable media, overlays, and linked archive documents in `_site/`. Originals, extraction caches, and utilities are not published. The hosted viewer hides links to local-only movie and original VOB files; movie/bonus selections explain that those videos are not included and offer a return to the menu.
+
 ## Interpretation and timing
 
 - Original VIDEO_TS/VTS menu VOBs, IFOs and BUPs are copied unchanged. All 86 unique menu sector ranges are retained.

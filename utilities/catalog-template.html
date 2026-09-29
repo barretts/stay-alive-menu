@@ -22,6 +22,7 @@ let current=null,hovered=null,finishTimer=null,externalReturn=null,lastInteracti
 let menuOnly=document.documentElement.classList.contains('menu-only'),controlsTimer=null,playbackRequest=0,audioMuted=false,unlockSound=false;
 const menuNav=new MenuNavigation(archive);
 const path=(a,f)=>a.path+'/'+f;
+const localArchive=location.protocol==='file:';
 const s=archive.statistics;
 $('stats').textContent=`${s.unique_assets} assets · ${s.character_combinations} character combinations · ${s.interactive_assets} screens with buttons · ${s.highlight_pngs} highlight graphics`;
 for(const category of [...new Set(assets.map(a=>a.category))].sort()){const o=document.createElement('option');o.value=category;o.textContent=category;$('category').append(o)}
@@ -112,7 +113,8 @@ function openAsset(a,options={}){
  }
  $('continue').hidden=buttons.length>0;
  if(!buttons.length)$('buttons').textContent='No interactive buttons in this cell.';
- $('files').replaceChildren();for(const [label,file] of [['MP4 clip','preview.mp4'],['Button diagram','buttons.jpg'],['Original VOB','original.vob']]){const link=document.createElement('a');link.href=path(a,file);link.textContent=label;$('files').append(link)}
+ const downloads=[['MP4 clip','preview.mp4'],['Button diagram','buttons.jpg']];if(localArchive)downloads.push(['Original VOB','original.vob']);
+ $('files').replaceChildren();for(const [label,file] of downloads){const link=document.createElement('a');link.href=path(a,file);link.textContent=label;$('files').append(link)}
  $('metadata').textContent=JSON.stringify({source_duration:a.duration,viewing_copy_seconds:a.preview_seconds,video_start:a.preview_probe.streams.find(s=>s.codec_type==='video').start_time,holds:a.holds||[],end_actions:a.end_actions||[],references:a.references,sha256:a.sha256,notes:archive.archive_notes.slice(1,4)},null,2);
  $('commands').textContent=a.references.map(r=>{const p=pgcs.get(r.pgc);return p.id+' · '+p.label+'\n'+Object.entries(p.commands).map(([phase,cmds])=>phase+':\n'+cmds.map(c=>c.line+'. '+c.text+' ['+c.hex+']').join('\n')).join('\n')}).join('\n\n');boxes();if(!$('detail').open)$('detail').showModal();
  updateOverlay();if(menuOnly){const selected=options.fromHistory&&$('hotspots').querySelector(`[data-button="${selectedNumber}"]`);(selected||$('stage')).focus({preventScroll:true});}if(menuOnly||options.autoplay)playVideo();
@@ -134,10 +136,11 @@ function displayDestination(result,origin=menuNav.snapshot()){
   else{const fallback=new MenuNavigation(archive);fallback.seed('VTS01_VOB40_CELL01');externalReturn=fallback.snapshot();}
   playbackRequest++;$('playMenu').hidden=true;$('video').pause();$('titlePanel').hidden=false;$('targetTitle').textContent=result.name+(result.chapter>1?` · chapter ${result.chapter}`:'');
   $('targetInfo').textContent=result.title===1?'The movie is a separate file. Open it in your video player; the DVD chapter destination is shown here.':'This button leads to a video title on the source DVD. Open the original clip below.';
+  if(!localArchive)$('targetInfo').textContent=result.title===1?'The movie is not included on this site.':'This video is not included on this site.';
   if(result.title===1){const chapter=archive.chapter_destinations.find(c=>c.title===1&&c.chapter===result.chapter);if(chapter)$('targetInfo').textContent+=` DVD chapter starts around ${Math.floor(chapter.approximate_ifo_start_seconds/60)}:${String(Math.floor(chapter.approximate_ifo_start_seconds%60)).padStart(2,'0')}.`;
-   if(result.audioStream===1)$('targetInfo').textContent+=' Commentary is selected on the DVD; the existing movie export has the original main audio.';
+   if(result.audioStream===1)$('targetInfo').textContent+=localArchive?' Commentary is selected on the DVD; the existing movie export has the original main audio.':' Commentary is selected on the DVD.';
   }
-  $('targetLinks').replaceChildren();const link=document.createElement('a');link.textContent=result.title===1?'Open the upscaled movie':'Open the original DVD clip';link.href=result.title===1?'../StayAlive_1080p_English_Subtitled.mkv':`file:///G:/_new/STAY_ALIVE/VIDEO_TS/VTS_${String(result.vts).padStart(2,'0')}_1.VOB`;$('targetLinks').append(link);
+  $('targetLinks').replaceChildren();if(localArchive){const link=document.createElement('a');link.textContent=result.title===1?'Open the upscaled movie':'Open the original DVD clip';link.href=result.title===1?'../StayAlive_1080p_English_Subtitled.mkv':`file:///G:/_new/STAY_ALIVE/VIDEO_TS/VTS_${String(result.vts).padStart(2,'0')}_1.VOB`;$('targetLinks').append(link);}
   for(const button of document.querySelectorAll('#hotspots button,#buttons button'))button.disabled=true;
   $('continue').hidden=true;$('menuStatus').textContent=menuOnly?'':'Video destination';$('returnToMenu').focus();
  }
