@@ -1,0 +1,87 @@
+﻿id,label,category,path,ifo_seconds,preview_seconds,buttons_wide,original_bytes,correct_activation
+VMGM_VOB02_CELL01,VMG still/dispatcher 2,Startup and stills,assets/VMGM_VOB02_CELL01,0.5005,0.033367,0,8192,
+VMGM_VOB01_CELL01,VMG still/dispatcher 1,Startup and stills,assets/VMGM_VOB01_CELL01,1.033367,1.001,0,489472,
+VMGM_VOB06_CELL01,VMG still/dispatcher 6,Startup and stills,assets/VMGM_VOB06_CELL01,0.5005,0.033367,2,51200,
+VMGM_VOB07_CELL01,VMG still/dispatcher 7,Startup and stills,assets/VMGM_VOB07_CELL01,0.5005,0.033367,0,34816,
+VMGM_VOB03_CELL01,VMG still/dispatcher 3,Startup and stills,assets/VMGM_VOB03_CELL01,0.5005,0.033367,0,120832,
+VMGM_VOB04_CELL01,VMG still/dispatcher 4,Startup and stills,assets/VMGM_VOB04_CELL01,0.5005,0.033367,0,180224,
+VMGM_VOB05_CELL01,VMG still/dispatcher 5,Startup and stills,assets/VMGM_VOB05_CELL01,0.5005,0.033367,0,8192,
+VMGM_VOB08_CELL01,VMG still/dispatcher 8,Startup and stills,assets/VMGM_VOB08_CELL01,0.5005,0.033367,0,8192,
+VMGM_VOB09_CELL01,VMG still/dispatcher 9,Startup and stills,assets/VMGM_VOB09_CELL01,0.5005,0.033367,0,8192,
+VTS01_VOB32_CELL01,Television main entrance · variation 1,Transitions,assets/VTS01_VOB32_CELL01,11.5005,11.5115,0,5474304,
+VTS01_VOB33_CELL01,Television main menu · variation 1,Activated main menus,assets/VTS01_VOB33_CELL01,20.0,20.22,5,9521152,
+VTS01_VOB34_CELL01,Television main entrance · variation 2,Transitions,assets/VTS01_VOB34_CELL01,11.5005,11.5115,0,5474304,
+VTS01_VOB35_CELL01,Television main menu · variation 2,Activated main menus,assets/VTS01_VOB35_CELL01,34.367033,34.601033,5,16343040,
+VTS01_VOB36_CELL01,Television main entrance · variation 3,Transitions,assets/VTS01_VOB36_CELL01,11.5005,11.5115,0,5474304,
+VTS01_VOB37_CELL01,Television main menu · variation 3,Activated main menus,assets/VTS01_VOB37_CELL01,29.9009,30.1299,5,14202880,
+VTS01_VOB12_CELL01,Set up · character style,Set up,assets/VTS01_VOB12_CELL01,44.934267,44.96,4,1376256,
+VTS01_VOB23_CELL01,Set up · television style,Set up,assets/VTS01_VOB23_CELL01,44.934267,44.96,4,1366016,
+VTS01_VOB09_CELL01,Captions & subtitles · character style,Captions & subtitles,assets/VTS01_VOB09_CELL01,10.233567,10.24,5,389120,
+VTS01_VOB24_CELL01,Captions & subtitles · television style,Captions & subtitles,assets/VTS01_VOB24_CELL01,10.233567,10.24,5,372736,
+VTS01_VOB01_CELL01,Scene selection · chapters 1–4 · character style,Scene selection,assets/VTS01_VOB01_CELL01,20.0,20.02,14,9502720,
+VTS01_VOB02_CELL01,Scene selection · chapters 5–8 · character style,Scene selection,assets/VTS01_VOB02_CELL01,20.0,20.02,14,9543680,
+VTS01_VOB03_CELL01,Scene selection · chapters 9–12 · character style,Scene selection,assets/VTS01_VOB03_CELL01,20.0,20.02,14,9562112,
+VTS01_VOB04_CELL01,Scene selection · chapters 13–16 · character style,Scene selection,assets/VTS01_VOB04_CELL01,20.0,20.02,14,9474048,
+VTS01_VOB05_CELL01,Scene selection · chapters 17–20 · character style,Scene selection,assets/VTS01_VOB05_CELL01,20.0,20.02,14,9508864,
+VTS01_VOB13_CELL01,Scene selection · chapters 1–4 · television style,Scene selection,assets/VTS01_VOB13_CELL01,20.0,20.02,14,9537536,
+VTS01_VOB14_CELL01,Scene selection · chapters 5–8 · television style,Scene selection,assets/VTS01_VOB14_CELL01,20.0,20.02,14,9566208,
+VTS01_VOB15_CELL01,Scene selection · chapters 9–12 · television style,Scene selection,assets/VTS01_VOB15_CELL01,20.0,20.02,14,9582592,
+VTS01_VOB16_CELL01,Scene selection · chapters 13–16 · television style,Scene selection,assets/VTS01_VOB16_CELL01,20.0,20.02,14,9601024,
+VTS01_VOB17_CELL01,Scene selection · chapters 17–20 · television style,Scene selection,assets/VTS01_VOB17_CELL01,20.0,20.02,14,8163328,
+VTS01_VOB06_CELL01,Bonus entrance · static/glitch,Transitions,assets/VTS01_VOB06_CELL01,2.233567,2.235567,0,1056768,
+VTS01_VOB08_CELL01,Bonus features · character style,Bonus features,assets/VTS01_VOB08_CELL01,10.233567,10.24,3,387072,
+VTS01_VOB18_CELL01,Bonus entrance · cursor,Transitions,assets/VTS01_VOB18_CELL01,2.166833,2.168833,0,493568,
+VTS01_VOB19_CELL01,Bonus features · television style,Bonus features,assets/VTS01_VOB19_CELL01,10.233567,10.24,4,380928,
+VTS01_VOB10_CELL01,Audio commentary · character style,Audio commentary,assets/VTS01_VOB10_CELL01,10.233567,10.24,3,389120,
+VTS01_VOB25_CELL01,Audio commentary · television style,Audio commentary,assets/VTS01_VOB25_CELL01,10.233567,10.24,3,389120,
+VTS01_VOB41_CELL01,Commentary dispatcher still,Transitions,assets/VTS01_VOB41_CELL01,0.5005,0.033367,0,61440,
+VTS01_VOB20_CELL01,Commentary dispatcher still,Transitions,assets/VTS01_VOB20_CELL01,0.5005,0.033367,0,8192,
+VTS01_VOB11_CELL01,Register your DVD · character style,DVD registration,assets/VTS01_VOB11_CELL01,44.934267,44.96,1,1386496,
+VTS01_VOB22_CELL01,Register your DVD · television style,DVD registration,assets/VTS01_VOB22_CELL01,44.934267,44.96,1,1374208,
+VTS01_VOB07_CELL01,Bonus exit · static/glitch,Transitions,assets/VTS01_VOB07_CELL01,2.233567,2.235567,0,1054720,
+VTS01_VOB21_CELL01,Bonus exit · cursor,Transitions,assets/VTS01_VOB21_CELL01,2.166833,2.168833,0,372736,
+VTS01_VOB38_CELL01,Menu opening · entrance,Transitions,assets/VTS01_VOB38_CELL01,13.0,13.013,0,6176768,
+VTS01_VOB39_CELL01,Menu opening · character fade-in,Transitions,assets/VTS01_VOB39_CELL01,1.567233,1.768233,0,751616,
+VTS01_VOB40_CELL01,Character 1 · combination 01,Character builder,assets/VTS01_VOB40_CELL01,40.667333,40.907333,9,19271680,False
+VTS01_VOB43_CELL01,Character 1 · combination 02,Character builder,assets/VTS01_VOB43_CELL01,40.667333,40.707333,9,19372032,False
+VTS01_VOB44_CELL01,Character 1 · combination 03,Character builder,assets/VTS01_VOB44_CELL01,40.667333,40.707333,9,19273728,False
+VTS01_VOB45_CELL01,Character 1 · combination 04,Character builder,assets/VTS01_VOB45_CELL01,40.667333,40.707333,9,19331072,False
+VTS01_VOB46_CELL01,Character 1 · combination 05,Character builder,assets/VTS01_VOB46_CELL01,40.667333,40.707333,9,19298304,False
+VTS01_VOB47_CELL01,Character 1 · combination 06,Character builder,assets/VTS01_VOB47_CELL01,40.667333,40.707333,9,19326976,False
+VTS01_VOB48_CELL01,Character 1 · combination 07,Character builder,assets/VTS01_VOB48_CELL01,40.667333,40.707333,9,19263488,False
+VTS01_VOB49_CELL01,Character 1 · combination 08 · correct activation,Character builder,assets/VTS01_VOB49_CELL01,40.667333,40.707333,9,19335168,True
+VTS01_VOB50_CELL01,Character 1 · combination 09,Character builder,assets/VTS01_VOB50_CELL01,40.667333,40.707333,9,19329024,False
+VTS01_VOB51_CELL01,Character 1 · combination 10,Character builder,assets/VTS01_VOB51_CELL01,40.667333,40.707333,9,19292160,False
+VTS01_VOB52_CELL01,Character 1 · combination 11,Character builder,assets/VTS01_VOB52_CELL01,40.667333,40.707333,9,19308544,False
+VTS01_VOB53_CELL01,Character 1 · combination 12,Character builder,assets/VTS01_VOB53_CELL01,40.667333,40.707333,9,19259392,False
+VTS01_VOB26_CELL01,Failed activation outcome 1,Activation outcomes,assets/VTS01_VOB26_CELL01,3.133467,3.136467,0,1484800,
+VTS01_VOB27_CELL01,Failed activation outcome 2,Activation outcomes,assets/VTS01_VOB27_CELL01,2.066733,2.068733,0,980992,
+VTS01_VOB28_CELL01,Failed activation outcome 3,Activation outcomes,assets/VTS01_VOB28_CELL01,1.8008,1.802,0,856064,
+VTS01_VOB29_CELL01,Failed activation outcome 4,Activation outcomes,assets/VTS01_VOB29_CELL01,2.4004,2.4024,0,1138688,
+VTS01_VOB30_CELL01,Failed activation outcome 5,Activation outcomes,assets/VTS01_VOB30_CELL01,2.8008,2.8028,0,1335296,
+VTS01_VOB31_CELL01,Failed activation outcome 6,Activation outcomes,assets/VTS01_VOB31_CELL01,1.9009,1.9019,0,903168,
+VTS01_VOB42_CELL01,Instructions · The Prayer of Elizabeth,Instructions,assets/VTS01_VOB42_CELL01,36.834167,36.864,1,1204224,
+VTS01_VOB54_CELL01,Character 2 · combination 01,Character builder,assets/VTS01_VOB54_CELL01,40.667333,40.707333,9,19275776,False
+VTS01_VOB55_CELL01,Character 2 · combination 02,Character builder,assets/VTS01_VOB55_CELL01,40.667333,40.707333,9,19259392,False
+VTS01_VOB56_CELL01,Character 2 · combination 03,Character builder,assets/VTS01_VOB56_CELL01,40.667333,40.707333,9,19324928,False
+VTS01_VOB57_CELL01,Character 2 · combination 04,Character builder,assets/VTS01_VOB57_CELL01,40.667333,40.707333,9,19324928,False
+VTS01_VOB58_CELL01,Character 2 · combination 05,Character builder,assets/VTS01_VOB58_CELL01,40.667333,40.707333,9,19345408,False
+VTS01_VOB59_CELL01,Character 2 · combination 06,Character builder,assets/VTS01_VOB59_CELL01,40.667333,40.707333,9,19286016,False
+VTS01_VOB60_CELL01,Character 2 · combination 07,Character builder,assets/VTS01_VOB60_CELL01,40.667333,40.707333,9,19322880,False
+VTS01_VOB61_CELL01,Character 2 · combination 08,Character builder,assets/VTS01_VOB61_CELL01,40.667333,40.707333,9,19322880,False
+VTS01_VOB62_CELL01,Character 2 · combination 09,Character builder,assets/VTS01_VOB62_CELL01,40.667333,40.707333,9,19357696,False
+VTS01_VOB63_CELL01,Character 2 · combination 10,Character builder,assets/VTS01_VOB63_CELL01,40.667333,40.707333,9,19316736,False
+VTS01_VOB64_CELL01,Character 2 · combination 11 · correct activation,Character builder,assets/VTS01_VOB64_CELL01,40.667333,40.707333,9,19331072,True
+VTS01_VOB65_CELL01,Character 2 · combination 12,Character builder,assets/VTS01_VOB65_CELL01,40.667333,40.707333,9,19308544,False
+VTS01_VOB66_CELL01,Character 3 · combination 01,Character builder,assets/VTS01_VOB66_CELL01,40.667333,40.707333,9,19343360,False
+VTS01_VOB67_CELL01,Character 3 · combination 02,Character builder,assets/VTS01_VOB67_CELL01,40.667333,40.707333,9,19288064,False
+VTS01_VOB68_CELL01,Character 3 · combination 03,Character builder,assets/VTS01_VOB68_CELL01,40.667333,40.707333,9,19288064,False
+VTS01_VOB69_CELL01,Character 3 · combination 04 · correct activation,Character builder,assets/VTS01_VOB69_CELL01,40.667333,40.707333,9,19337216,True
+VTS01_VOB70_CELL01,Character 3 · combination 05,Character builder,assets/VTS01_VOB70_CELL01,40.667333,40.707333,9,19298304,False
+VTS01_VOB71_CELL01,Character 3 · combination 06,Character builder,assets/VTS01_VOB71_CELL01,40.667333,40.707333,9,19279872,False
+VTS01_VOB72_CELL01,Character 3 · combination 07,Character builder,assets/VTS01_VOB72_CELL01,40.667333,40.707333,9,19294208,False
+VTS01_VOB73_CELL01,Character 3 · combination 08,Character builder,assets/VTS01_VOB73_CELL01,40.667333,40.707333,9,19347456,False
+VTS01_VOB74_CELL01,Character 3 · combination 09,Character builder,assets/VTS01_VOB74_CELL01,40.667333,40.707333,9,19343360,False
+VTS01_VOB75_CELL01,Character 3 · combination 10,Character builder,assets/VTS01_VOB75_CELL01,40.667333,40.707333,9,19265536,False
+VTS01_VOB76_CELL01,Character 3 · combination 11,Character builder,assets/VTS01_VOB76_CELL01,40.667333,40.707333,9,19275776,False
+VTS01_VOB77_CELL01,Character 3 · combination 12,Character builder,assets/VTS01_VOB77_CELL01,40.667333,40.707333,9,19265536,False

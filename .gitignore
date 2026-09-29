@@ -1,0 +1,22 @@
+# Original DVD source files and lossless extraction data stay local.
+/original/
+/assets/*/original.vob
+/assets/*/original_audio.ac3
+/assets/*/*.spu
+
+# Redundant audio, decoder intermediates, and per-asset rendering caches.
+# Keep preview.mp4, preview.jpg, normal/highlight PNGs, and buttons.jpg.
+/assets/*/audio.m4a
+/assets/*/background.png
+/assets/*/*_indices.png
+/assets/*/asset.json
+
+# Extraction logs, Python dependencies/caches, and browser verification output.
+*.log
+__pycache__/
+*.py[cod]
+/utilities/vendor/
+/utilities/*-profile/
+/utilities/checks/
+/utilities/linked-menu-live.png
+/utilities/*-result.json

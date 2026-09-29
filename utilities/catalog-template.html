@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Stay Alive · DVD menu archive</title>
+<script>document.documentElement.classList.toggle('menu-only',new URLSearchParams(location.search).get('view')==='menu');</script>
+<style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#101116;color:#eceef2}*{box-sizing:border-box}body{margin:0}header{padding:28px 32px;border-bottom:1px solid #303440;background:#181a21}h1{font-size:28px;margin:0 0 8px}p{line-height:1.55;color:#b9c0cb;margin:8px 0}a{color:#9fd7ff}nav{display:flex;gap:20px;flex-wrap:wrap;margin-top:16px}main{padding:24px 32px}#stats{color:#ddc798;font-size:14px}#tools{display:flex;gap:12px;margin:0 0 22px;flex-wrap:wrap}input,select,button{font:inherit;color:inherit;background:#212630;border:1px solid #434b5c;border-radius:7px;padding:9px 12px}input{flex:1;min-width:230px}button{cursor:pointer}button:hover{border-color:#80c2f7}#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}.card{padding:0;text-align:left;overflow:hidden;background:#1b1e26}.card img{width:100%;aspect-ratio:16/9;object-fit:contain;display:block;background:black}.card div{padding:13px}.card strong{display:block;font-size:15px}.card small{display:block;color:#aab3c1;margin-top:5px}.success{color:#b9eb98!important}dialog{border:1px solid #535c6a;border-radius:12px;background:#171a22;color:#eceef2;width:min(1250px,96vw);max-height:94vh;padding:22px}dialog::backdrop{background:#000b}.close{float:right}#detailBody{display:grid;grid-template-columns:minmax(0,2fr) minmax(260px,1fr);gap:22px;clear:both}#stage{position:relative;width:100%;aspect-ratio:16/9;background:black;overflow:hidden}video{width:100%;height:100%;display:block}#normal,#highlight,#boxes{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}#highlight{inset:auto;width:auto;height:auto}#boxes span{position:absolute;border:1px solid #60e6fc;background:#1fe6ff0d;color:#fff;font:12px monospace;padding:2px;text-shadow:0 1px 2px black}#buttons{display:flex;flex-direction:column;gap:6px;max-height:510px;overflow:auto}#buttons button{text-align:left;font-size:14px}#buttons small{display:block;color:#afbacb;font:11px monospace;margin-top:4px;overflow-wrap:anywhere}#detailTools{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:12px 0;font-size:13px}.meta{font:12px/1.55 monospace;color:#b4bfce;overflow-wrap:anywhere}details{margin:14px 0;background:#11141b;padding:12px;border-radius:6px}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}#files{display:flex;gap:14px;flex-wrap:wrap;font-size:13px}.empty{padding:30px;color:#a8b6c8}footer{padding:20px 32px;font-size:13px;border-top:1px solid #303440}@media(max-width:800px){#detailBody{grid-template-columns:1fr}header,main{padding:20px}#buttons{max-height:250px}}
+#hotspots{position:absolute;inset:0;pointer-events:none}#hotspots button{position:absolute;pointer-events:auto;background:transparent;border:0;border-radius:0;padding:0;color:transparent}#hotspots button:focus-visible{outline:2px solid #7ddfff;outline-offset:2px;background:#7ddfff14}#hotspots button:hover{border:0}#menuStatus{font-size:13px;min-height:20px;color:#ddc798}#titlePanel{padding:16px;border:1px solid #56647a;border-radius:8px;margin:12px 0;background:#202633}#titlePanel h3{margin:0 0 8px}#titlePanel a{display:inline-block;margin:8px 18px 8px 0}button:disabled{opacity:.45;cursor:default}.selected-button{border-color:#a7d6ff!important;background:#29394c!important}
+#menuOnlyLink{display:inline-flex;align-items:center;text-decoration:none;border:1px solid #434b5c;border-radius:7px;padding:9px 12px;background:#212630}#menuOnlyLink:hover{border-color:#80c2f7}
+.menu-only,.menu-only body{background:#000;overflow:hidden}.menu-only body>header,.menu-only body>main,.menu-only body>footer{display:none}.menu-only #detail{inset:0;margin:0;width:100vw;height:100vh;height:100dvh;max-width:none;max-height:none;border:0;border-radius:0;padding:0;background:#000}.menu-only #detail[open]{display:grid;place-items:center}.menu-only #detailBody{display:block;width:min(100vw,calc(100vh * 16 / 9));width:min(100vw,calc(100dvh * 16 / 9))}.menu-only #close,.menu-only #title,.menu-only #description,.menu-only #detailBody>aside,.menu-only #detailTools,.menu-only #menuHelp,.menu-only #files,.menu-only #detailBody details{display:none}.menu-only #stage{outline:none}.menu-only #titlePanel{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:12;width:min(520px,calc(100vw - 32px));max-height:calc(100dvh - 32px);overflow:auto;margin:0;background:#171a22f5;box-shadow:0 12px 60px #000a}.menu-only #menuStatus{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);z-index:12;width:max-content;max-width:calc(100vw - 32px);margin:0;padding:10px 14px;background:#171a22ee;border-radius:7px;pointer-events:none}.menu-only #menuStatus:empty{display:none}
+#menuControls:not([hidden]){position:fixed;left:12px;top:12px;z-index:15;display:flex;gap:8px;transition:opacity .2s}#menuControls a,#menuControls button{font-size:13px;color:#eceef2;background:#111b;border:1px solid #ffffff38;border-radius:6px;padding:8px 11px;text-decoration:none}#menuControls.controls-hidden{opacity:0;pointer-events:none}#menuControls:focus-within{opacity:1;pointer-events:auto}#menuControls a:hover,#menuControls button:hover{background:#242936ee}#playMenu{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:8;background:#171a22ee}#menuControls[hidden],#playMenu[hidden]{display:none}
+</style></head><body>
+<header><h1>Stay Alive <span style="color:#99a7b9;font-weight:400">· DVD menu archive</span></h1><p>Explore the original menu: choose a character, change their equipment, and follow the buttons between screens. Browse the complete asset collection below.</p><div id="stats"></div><nav><a href="Menu-Map.md">Navigation map</a><a href="README.md">Archive notes</a><a href="assets.csv">Asset inventory</a><a href="buttons.csv">Button inventory</a><a href="manifest.json">Full manifest</a><a href="validation.json">Verification</a></nav></header>
+<main><div id="tools"><button id="explore">Explore the DVD menu</button><a id="menuOnlyLink" href="?view=menu">Menu-only view</a><input id="search" type="search" placeholder="Find a screen, character, transition, or asset ID" aria-label="Search assets"><select id="category" aria-label="Filter category"><option value="">All categories</option></select><select id="success" aria-label="Filter activation"><option value="">All combinations</option><option value="correct">Correct activations</option></select></div><div id="grid"></div></main>
+<dialog id="detail" aria-labelledby="title"><button class="close" id="close">Close</button><h2 id="title"></h2><p id="description"></p><div id="detailBody"><div><div id="stage" tabindex="-1" aria-label="DVD menu"><video id="video" controls preload="metadata" playsinline></video><img id="normal" alt="" hidden><img id="highlight" alt="" hidden><div id="boxes"></div><div id="hotspots" aria-label="DVD menu buttons"></div><button id="playMenu" hidden>Play with sound</button></div><div id="detailTools"><button id="menuBack" disabled>Back</button><button id="continue" hidden>Skip transition</button><label><input id="showBoxes" type="checkbox" style="min-width:0"> Show button boxes</label><label>Highlight <select id="state"><option value="selected">Selected</option><option value="activated">Activated</option></select></label><button id="reset">Clear highlight</button></div><p id="menuHelp" style="font-size:13px">Click the original buttons on the menu or in the list to navigate. Use arrow keys to move between buttons, and Enter to select.</p><div id="menuStatus" role="status" aria-live="polite"></div><div id="titlePanel" hidden><h3 id="targetTitle"></h3><p id="targetInfo"></p><div id="targetLinks"></div><button id="returnToMenu">Return to menu</button></div><div id="files"></div><details><summary>Timing, holds, and source information</summary><pre id="metadata"></pre></details><details><summary>Program chain commands</summary><pre id="commands"></pre></details></div><aside><h3 style="margin-top:0">Original buttons</h3><div id="buttons"></div></aside></div><div id="menuControls" hidden><button id="soundToggle" type="button" aria-label="Mute menu sound" aria-pressed="true">Sound on</button><a id="archiveView" href="index.html">Archive</a></div></dialog>
+<footer>All original menu sectors are preserved. Preview MP4s are viewing copies; the original video, audio, subpictures, and navigation remain in the archive. Four contact sheets: <a href="contact-sheet-1.jpg">1</a> · <a href="contact-sheet-2.jpg">2</a> · <a href="contact-sheet-3.jpg">3</a> · <a href="contact-sheet-4.jpg">4</a>.</footer>
+<script id="archiveData" type="application/json">__ARCHIVE_DATA__</script>
+<script src="menu-navigation.js"></script>
+<script>
+'use strict';
+const archive=JSON.parse(document.getElementById('archiveData').textContent);
+const $=id=>document.getElementById(id), assets=archive.assets, byId=new Map(assets.map(a=>[a.id,a])), pgcs=new Map(archive.pgcs.map(p=>[p.id,p]));
+let current=null,hovered=null,finishTimer=null,externalReturn=null,lastInteractiveMenu=null;
+let menuOnly=document.documentElement.classList.contains('menu-only'),controlsTimer=null,playbackRequest=0,audioMuted=false,unlockSound=false;
+const menuNav=new MenuNavigation(archive);
+const path=(a,f)=>a.path+'/'+f;
+const s=archive.statistics;
+$('stats').textContent=`${s.unique_assets} assets · ${s.character_combinations} character combinations · ${s.interactive_assets} screens with buttons · ${s.highlight_pngs} highlight graphics`;
+for(const category of [...new Set(assets.map(a=>a.category))].sort()){const o=document.createElement('option');o.value=category;o.textContent=category;$('category').append(o)}
+function render(){
+ const q=$('search').value.toLowerCase(),category=$('category').value,correct=$('success').value==='correct';$('grid').replaceChildren();
+ for(const a of assets.filter(a=>(!category||a.category===category)&&(!correct||a.correct_activation)&&(`${a.id} ${a.label} ${a.category}`).toLowerCase().includes(q))){
+  const b=document.createElement('button');b.className='card';const img=document.createElement('img');img.src=path(a,'preview.jpg');img.alt=a.label;img.loading='lazy';b.append(img);
+  const d=document.createElement('div'),t=document.createElement('strong'),info=document.createElement('small'),id=document.createElement('small');t.textContent=a.label;info.textContent=`${a.category} · ${a.preview_seconds.toFixed(2)} s · ${a.button_states[0]?.button_count||0} buttons`;id.textContent=a.id;if(a.correct_activation)id.className='success';d.append(t,info,id);b.append(d);b.onclick=()=>openAsset(a);$('grid').append(b);
+ }
+ if(!$('grid').children.length){const p=document.createElement('p');p.className='empty';p.textContent='No matching assets.';$('grid').append(p)}
+}
+function revealControls(){
+ if(!menuOnly)return;
+ clearTimeout(controlsTimer);$('menuControls').classList.remove('controls-hidden');
+ controlsTimer=setTimeout(()=>$('menuControls').classList.add('controls-hidden'),2500);
+}
+function configureView(enabled){
+ const changed=menuOnly!==enabled;menuOnly=enabled;
+ document.documentElement.classList.toggle('menu-only',enabled);
+ document.title=enabled?'Stay Alive · DVD menu':'Stay Alive · DVD menu archive';
+ $('video').controls=!enabled;$('menuControls').hidden=!enabled;$('playMenu').hidden=true;
+ $('stage').toggleAttribute('autofocus',enabled);
+ if(enabled){$('showBoxes').checked=false;boxes();revealControls();}
+ else{clearTimeout(controlsTimer);if(changed)render();}
+}
+function updateSoundControl(){
+ $('soundToggle').textContent=audioMuted?(unlockSound?'Enable sound':'Sound off'):'Sound on';
+ $('soundToggle').setAttribute('aria-label',audioMuted?'Enable menu sound':'Mute menu sound');
+ $('soundToggle').setAttribute('aria-pressed',String(!audioMuted));
+}
+function playbackFailed(error,request){
+ if(request!==playbackRequest||!menuOnly||!current||externalReturn||error.name==='AbortError')return;
+ $('playMenu').hidden=false;
+ if(error.name!=='NotAllowedError')$('menuStatus').textContent='The menu video could not be played. Try Play again.';
+}
+async function playVideo(){
+ const video=$('video'),request=++playbackRequest;
+ $('playMenu').hidden=true;
+ if(menuOnly){video.muted=audioMuted;updateSoundControl();}
+ try{await video.play();}
+ catch(error){
+  if(request!==playbackRequest||!current||externalReturn||error.name==='AbortError')return;
+  if(menuOnly&&!video.muted&&error.name==='NotAllowedError'){
+   audioMuted=true;unlockSound=true;video.muted=true;updateSoundControl();
+   try{await video.play();}catch(fallbackError){playbackFailed(fallbackError,request);}
+  }else playbackFailed(error,request);
+ }
+}
+function enableSoundOnGesture(event){
+ if(!menuOnly||!unlockSound||!event.isTrusted||!event.target.closest('#detail')||event.target.closest('#soundToggle,#archiveView,#playMenu'))return;
+ if(event.type==='keydown'&&!['Enter',' '].includes(event.key))return;
+ audioMuted=false;unlockSound=false;$('video').muted=false;updateSoundControl();
+ if(current&&!externalReturn)playVideo();
+}
+function rememberSelection(button){
+ hovered=button;menuNav.s[8]=button.number*1024;updateOverlay();
+ if(history.state?.menuArchive)history.replaceState({...history.state,dvd:menuNav.snapshot()},'');
+}
+function clearHighlight(){hovered=null;$('highlight').hidden=true}
+function wideGroup(a){const ns=a.button_states[0];if(!ns)return 1;const i=ns.display_types.findIndex(d=>d&1);return i>=0?i+1:1}
+function graphicsFor(a,t){
+ const p=pgcs.get(a.references[0].pgc),ctl=parseInt(p.subpicture_controls[0],16),stream=0x20+((ctl>>>16)&31),offset=Number(a.preview_probe.streams.find(s=>s.codec_type==='video').start_time||0);
+ const effectiveTime=t===0&&$('video').paused?Math.min(5,a.duration.seconds*.4)+offset:t;
+ return a.graphics.filter(g=>g.stream===stream&&Number(g.start_seconds||0)+Number(g.definition.start||0)+offset<=effectiveTime+.03).at(-1);
+}
+function updateOverlay(){
+ if(!current)return;const v=$('video'),g=graphicsFor(current,v.currentTime);$('normal').hidden=!g;
+ if(g){const url=path(current,g.normal);if($('normal').getAttribute('src')!==url)$('normal').src=url}
+ if(hovered){const h=g?.highlights.find(h=>h.button===hovered.number&&h.group===hovered.group&&h.state===$('state').value);$('highlight').hidden=!h;if(h){const [x,y,xe,ye]=h.bbox,i=$('highlight');i.src=path(current,h.file);i.style.left=x/720*100+'%';i.style.top=y/480*100+'%';i.style.width=(xe-x+1)/720*100+'%';i.style.height=(ye-y+1)/480*100+'%'}}
+}
+function boxes(){
+ $('boxes').replaceChildren();if(!current||!$('showBoxes').checked)return;const group=wideGroup(current);
+ for(const b of current.button_states[0]?.buttons.filter(b=>b.group===group)||[]){const span=document.createElement('span');const [x,y,xe,ye]=b.bbox;Object.assign(span.style,{left:x/720*100+'%',top:y/480*100+'%',width:(xe-x+1)/720*100+'%',height:(ye-y+1)/480*100+'%'});span.textContent=b.number;$('boxes').append(span)}
+}
+function openAsset(a,options={}){
+ clearTimeout(finishTimer);finishTimer=null;playbackRequest++;$('playMenu').hidden=true;if(!options.navigation){if(!$('detail').open)lastInteractiveMenu=null;menuNav.seed(a.id);}
+ const canGoBack=$('detail').open;
+ if(!options.fromHistory){const url=new URL(location.href);url.hash='asset='+encodeURIComponent(a.id);history.pushState({menuArchive:true,canGoBack,dvd:menuNav.snapshot()},'',url.href);}
+ current=a;externalReturn=null;clearHighlight();$('title').textContent=a.label;$('description').textContent=a.id+' · '+a.category;$('video').src=path(a,'preview.mp4');$('video').poster=path(a,'preview.jpg');$('video').loop=menuNav.loops();$('normal').hidden=true;$('buttons').replaceChildren();$('hotspots').replaceChildren();$('titlePanel').hidden=true;$('menuStatus').textContent='';$('menuBack').disabled=!history.state?.canGoBack;
+ const group=wideGroup(a),buttons=a.button_states[0]?.buttons.filter(b=>b.group===group)||[];
+ const selectedNumber=menuNav.s[8]>>10;
+ if(buttons.length)lastInteractiveMenu=menuNav.snapshot();
+ for(const b of buttons){
+  const button=document.createElement('button'),small=document.createElement('small');button.dataset.button=b.number;button.append(document.createTextNode(`${b.number}. ${b.label}`));small.textContent=b.command.text;button.append(small);
+  const hotspot=document.createElement('button');hotspot.type='button';hotspot.dataset.button=b.number;hotspot.setAttribute('aria-label',b.label);hotspot.title=b.label;const [x,y,xe,ye]=b.bbox;Object.assign(hotspot.style,{left:x/720*100+'%',top:y/480*100+'%',width:(xe-x+1)/720*100+'%',height:(ye-y+1)/480*100+'%'});
+  for(const control of [button,hotspot]){control.onmouseenter=control.onfocus=()=>rememberSelection(b);control.onmouseleave=control.onblur=clearHighlight;control.onclick=()=>navigateButton(b);}
+  $('buttons').append(button);$('hotspots').append(hotspot);
+ }
+ $('continue').hidden=buttons.length>0;
+ if(!buttons.length)$('buttons').textContent='No interactive buttons in this cell.';
+ $('files').replaceChildren();for(const [label,file] of [['MP4 clip','preview.mp4'],['Button diagram','buttons.jpg'],['Original VOB','original.vob']]){const link=document.createElement('a');link.href=path(a,file);link.textContent=label;$('files').append(link)}
+ $('metadata').textContent=JSON.stringify({source_duration:a.duration,viewing_copy_seconds:a.preview_seconds,video_start:a.preview_probe.streams.find(s=>s.codec_type==='video').start_time,holds:a.holds||[],end_actions:a.end_actions||[],references:a.references,sha256:a.sha256,notes:archive.archive_notes.slice(1,4)},null,2);
+ $('commands').textContent=a.references.map(r=>{const p=pgcs.get(r.pgc);return p.id+' · '+p.label+'\n'+Object.entries(p.commands).map(([phase,cmds])=>phase+':\n'+cmds.map(c=>c.line+'. '+c.text+' ['+c.hex+']').join('\n')).join('\n')}).join('\n\n');boxes();if(!$('detail').open)$('detail').showModal();
+ updateOverlay();if(menuOnly){const selected=options.fromHistory&&$('hotspots').querySelector(`[data-button="${selectedNumber}"]`);(selected||$('stage')).focus({preventScroll:true});}if(menuOnly||options.autoplay)playVideo();
+}
+function navigateButton(button){
+ rememberSelection(button);
+ const origin=menuNav.snapshot();clearTimeout(finishTimer);finishTimer=null;
+ try{displayDestination(menuNav.press(button),origin);}catch(e){menuNav.restore(origin);$('menuStatus').textContent=e.message;}
+}
+function displayDestination(result,origin=menuNav.snapshot()){
+ if(!result)return;
+ if(result.kind==='asset'){
+  const a=byId.get(result.assetId);if(!a)throw Error('This screen was not extracted.');
+  openAsset(a,{navigation:true,autoplay:true});return;
+ }
+ if(result.kind==='notice'){menuNav.restore(origin);$('menuStatus').textContent=result.message;return;}
+ if(result.kind==='title'){
+  if(lastInteractiveMenu)externalReturn={...lastInteractiveMenu,g:[...lastInteractiveMenu.g],s:[...menuNav.s]};
+  else{const fallback=new MenuNavigation(archive);fallback.seed('VTS01_VOB40_CELL01');externalReturn=fallback.snapshot();}
+  playbackRequest++;$('playMenu').hidden=true;$('video').pause();$('titlePanel').hidden=false;$('targetTitle').textContent=result.name+(result.chapter>1?` · chapter ${result.chapter}`:'');
+  $('targetInfo').textContent=result.title===1?'The movie is a separate file. Open it in your video player; the DVD chapter destination is shown here.':'This button leads to a video title on the source DVD. Open the original clip below.';
+  if(result.title===1){const chapter=archive.chapter_destinations.find(c=>c.title===1&&c.chapter===result.chapter);if(chapter)$('targetInfo').textContent+=` DVD chapter starts around ${Math.floor(chapter.approximate_ifo_start_seconds/60)}:${String(Math.floor(chapter.approximate_ifo_start_seconds%60)).padStart(2,'0')}.`;
+   if(result.audioStream===1)$('targetInfo').textContent+=' Commentary is selected on the DVD; the existing movie export has the original main audio.';
+  }
+  $('targetLinks').replaceChildren();const link=document.createElement('a');link.textContent=result.title===1?'Open the upscaled movie':'Open the original DVD clip';link.href=result.title===1?'../StayAlive_1080p_English_Subtitled.mkv':`file:///G:/_new/STAY_ALIVE/VIDEO_TS/VTS_${String(result.vts).padStart(2,'0')}_1.VOB`;$('targetLinks').append(link);
+  for(const button of document.querySelectorAll('#hotspots button,#buttons button'))button.disabled=true;
+  $('continue').hidden=true;$('menuStatus').textContent=menuOnly?'':'Video destination';$('returnToMenu').focus();
+ }
+}
+function continueMenu(){
+ if(!current||externalReturn)return;const origin=menuNav.snapshot();
+ try{displayDestination(menuNav.finish(),origin);}catch(e){menuNav.restore(origin);$('menuStatus').textContent=e.message;}
+}
+function clipEnded(){
+ clearTimeout(finishTimer);if(!current||externalReturn)return;
+ const p=pgcs.get(menuNav.pgc),cell=p?.cells[menuNav.cell-1];if(!cell||cell.still_time===255)return;
+ const hold=Math.max(0,cell.duration.seconds-current.preview_seconds)+cell.still_time;
+ finishTimer=setTimeout(continueMenu,hold*1000);
+}
+function routeFromHistory(){
+ clearTimeout(finishTimer);configureView(new URLSearchParams(location.search).get('view')==='menu');
+ const id=new URLSearchParams(location.hash.slice(1)).get('asset');
+ if(id&&byId.has(id)){
+  if(history.state?.menuArchive&&history.state.dvd){menuNav.restore(history.state.dvd);openAsset(byId.get(id),{navigation:true,fromHistory:true});}
+  else openAsset(byId.get(id),{fromHistory:true});
+  if(menuOnly&&!history.state?.menuArchive)replaceMenuHistory();
+ }else if(menuOnly){
+  const result=menuNav.start();openAsset(byId.get(result.assetId),{navigation:true,fromHistory:true});replaceMenuHistory();
+ }else{playbackRequest++;$('video').pause();if($('detail').open)$('detail').close();current=null;lastInteractiveMenu=null;}
+}
+function replaceMenuHistory(){
+ const url=new URL(location.href);url.hash='asset='+encodeURIComponent(current.id);
+ history.replaceState({menuArchive:true,canGoBack:false,dvd:menuNav.snapshot()},'',url.href);
+}
+$('explore').onclick=()=>{displayDestination(menuNav.start());};
+$('menuOnlyLink').onclick=event=>{
+ if(event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
+ event.preventDefault();const url=new URL(location.href);url.searchParams.set('view','menu');url.hash='';history.pushState(null,'',url.href);routeFromHistory();
+};
+$('archiveView').onclick=event=>{if(event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;event.preventDefault();libraryHistory();routeFromHistory();};
+$('soundToggle').onclick=()=>{audioMuted=!audioMuted;unlockSound=false;$('video').muted=audioMuted;updateSoundControl();if(current&&!externalReturn)playVideo();};
+$('playMenu').onclick=()=>{audioMuted=false;unlockSound=false;playVideo();};
+$('detail').addEventListener('pointermove',revealControls);
+$('detail').addEventListener('pointerdown',revealControls);
+$('detail').addEventListener('keydown',revealControls);
+$('menuControls').addEventListener('focusout',revealControls);
+$('detail').addEventListener('click',enableSoundOnGesture,true);
+$('detail').addEventListener('keydown',enableSoundOnGesture,true);
+$('menuBack').onclick=()=>{if(history.state?.canGoBack)history.back();};
+$('continue').onclick=continueMenu;
+$('returnToMenu').onclick=()=>{if(!externalReturn)return;const old=externalReturn;menuNav.restore(old);openAsset(byId.get(old.asset),{navigation:true});};
+$('detail').addEventListener('keydown',event=>{
+ if(!current||externalReturn||['INPUT','SELECT','TEXTAREA','VIDEO'].includes(event.target.tagName)||event.target.closest('#menuControls,#playMenu'))return;
+ const buttons=current.button_states[0]?.buttons.filter(b=>b.group===wideGroup(current))||[];if(!buttons.length)return;
+ const selected=hovered||buttons.find(b=>b.number===(menuNav.s[8]>>10))||buttons[0];
+ if(event.key==='Enter'&&(event.target.id==='stage'||event.target.closest('#hotspots'))){event.preventDefault();navigateButton(selected);return;}
+ const direction={ArrowUp:'up',ArrowDown:'down',ArrowLeft:'left',ArrowRight:'right'}[event.key];if(!direction)return;
+ const next=buttons.find(b=>b.number===selected[direction]);
+ if(next){event.preventDefault();$('hotspots').querySelector(`[data-button="${next.number}"]`)?.focus();}
+});
+window.addEventListener('popstate',routeFromHistory);
+function libraryHistory(){const url=new URL(location.href);url.searchParams.delete('view');url.hash='';history.pushState(null,'',url.href);}
+$('close').onclick=()=>{libraryHistory();$('detail').close();};$('detail').addEventListener('cancel',event=>{if(menuOnly){event.preventDefault();libraryHistory();routeFromHistory();}else libraryHistory();});$('detail').addEventListener('close',()=>{if($('detail').open)return;clearTimeout(finishTimer);playbackRequest++;$('video').pause();current=null;lastInteractiveMenu=null;});
+$('reset').onclick=clearHighlight;$('showBoxes').onchange=boxes;$('state').onchange=updateOverlay;$('video').addEventListener('timeupdate',updateOverlay);$('video').addEventListener('seeked',updateOverlay);$('video').addEventListener('loadedmetadata',updateOverlay);$('video').addEventListener('ended',clipEnded);
+for(const id of ['search','category','success'])$(id).addEventListener(id==='search'?'input':'change',render);
+configureView(menuOnly);updateSoundControl();if(!menuOnly)render();
+routeFromHistory();
+</script></body></html>
